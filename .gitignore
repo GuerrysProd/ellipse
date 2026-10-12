@@ -1,0 +1,13 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Documents de travail et ancien squelette : conservés en local, hors du dépôt public.
+/docs/
+/archive/
