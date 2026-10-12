@@ -1,6 +1,5 @@
-import type { NextConfig } from 'next';
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   // Les photographies sont servies et redimensionnées par le CDN d'Unsplash : voir src/lib/image-loader.ts.
