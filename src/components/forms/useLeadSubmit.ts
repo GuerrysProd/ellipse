@@ -11,6 +11,7 @@ export function useLeadSubmit(kind: LeadKind, source: string) {
   const [status, setStatus] = useState<Status>('idle');
   const [errors, setErrors] = useState<FieldErrors>({});
   const [website, setWebsite] = useState('');
+  const [demo, setDemo] = useState(false);
   const mountedAt = useRef(Date.now());
 
   function clearError(name: string) {
@@ -42,6 +43,9 @@ export function useLeadSubmit(kind: LeadKind, source: string) {
         return false;
       }
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      // En mode démonstration, la route accepte la demande sans la transmettre : le formulaire doit le dire.
+      const body = (await response.json().catch(() => ({}))) as { demo?: boolean };
+      setDemo(body.demo === true);
       setErrors({});
       setStatus('sent');
       track('lead_submit', { kind, source });
@@ -52,5 +56,5 @@ export function useLeadSubmit(kind: LeadKind, source: string) {
     }
   }
 
-  return { status, errors, clearError, submit, website, setWebsite };
+  return { status, errors, clearError, submit, website, setWebsite, demo };
 }

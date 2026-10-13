@@ -2,7 +2,7 @@
 
 import { CircleCheck, Send } from 'lucide-react';
 import { useId, useState } from 'react';
-import { ConsentBox, ErrorText, Honeypot, SendFailure, TextField } from './Field';
+import { ConsentBox, DemoNotice, ErrorText, Honeypot, SendFailure, TextField } from './Field';
 import { useLeadSubmit } from './useLeadSubmit';
 
 const SUBJECTS = [
@@ -46,6 +46,7 @@ export function ContactForm({ source, variant = 'contact', defaultSubject = '' }
         <CircleCheck className="size-10 text-petrol" strokeWidth={1.4} aria-hidden="true" />
         <p className="mt-4 font-serif text-2xl font-medium text-ink">Message envoyé</p>
         <p className="mt-2 text-slate">Merci {fields.prenom}. Nous revenons vers vous rapidement, par téléphone ou par e-mail.</p>
+        {lead.demo && <DemoNotice />}
       </div>
     );
   }

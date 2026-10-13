@@ -3,7 +3,7 @@
 import { ArrowRight, CircleCheck, PhoneCall } from 'lucide-react';
 import { useId, useState } from 'react';
 import { site } from '@/content/site';
-import { ErrorText, Honeypot, SendFailure, TextField } from './Field';
+import { DemoNotice, ErrorText, Honeypot, SendFailure, TextField } from './Field';
 import { useLeadSubmit } from './useLeadSubmit';
 
 interface Props {
@@ -29,6 +29,7 @@ export function CallbackForm({ source, title = 'Être rappelé' }: Props) {
         <CircleCheck className="size-10 text-petrol" strokeWidth={1.4} aria-hidden="true" />
         <p className="mt-4 font-serif text-2xl font-medium text-ink">Demande enregistrée</p>
         <p className="mt-2 text-slate">Merci {fields.prenom}. Nous vous rappelons au {fields.telephone}, aux heures d'ouverture du cabinet.</p>
+        {lead.demo && <DemoNotice />}
       </div>
     );
   }

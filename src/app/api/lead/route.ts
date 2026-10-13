@@ -35,8 +35,10 @@ export async function POST(request: Request) {
     // Sans webhook, rien n'est transmis. Le journal ne contient aucune donnée personnelle.
     console.warn(`[lead] LEAD_WEBHOOK_URL absent : demande « ${lead.kind} » depuis ${lead.source} non transmise.`);
     // En production, le visiteur voit le message d'échec et le numéro de téléphone : aucune demande n'est perdue en silence.
-    if (process.env.NODE_ENV === 'production') return Response.json({ ok: false, errors: { form: 'Service indisponible.' } }, { status: 503 });
-    return Response.json({ ok: true });
+    const demo = process.env.LEAD_DEMO_MODE === 'true' || process.env.NODE_ENV !== 'production';
+    if (!demo) return Response.json({ ok: false, errors: { form: 'Service indisponible.' } }, { status: 503 });
+    // Mode démonstration (préversion, développement) : la demande est acceptée sans être transmise, et le formulaire l'annonce.
+    return Response.json({ ok: true, demo: true });
   }
 
   try {

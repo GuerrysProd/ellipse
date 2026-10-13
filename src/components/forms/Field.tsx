@@ -1,3 +1,4 @@
+import { FlaskConical } from 'lucide-react';
 import { site } from '@/content/site';
 
 interface FieldProps {
@@ -86,6 +87,18 @@ export function ConsentBox({ id, checked, onChange, error }: { id: string; check
 }
 
 /** Message affiché quand l'envoi échoue : le visiteur garde un moyen de joindre le cabinet. */
+/** Affiché après un envoi accepté en mode démonstration : rien n'a été transmis au cabinet. */
+export function DemoNotice() {
+  return (
+    <p className="mt-4 flex gap-3 rounded-xl border border-dashed border-steel/60 bg-pearl p-4 text-sm text-slate">
+      <FlaskConical className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+      <span>
+        <strong className="text-ink">Mode démonstration.</strong> Cette demande n'a été transmise à personne : le site n'est pas encore relié à l'outil du cabinet.
+      </span>
+    </p>
+  );
+}
+
 export function SendFailure() {
   return (
     <p role="alert" className="rounded-xl border border-danger/40 bg-danger/5 p-4 text-sm">

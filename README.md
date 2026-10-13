@@ -81,7 +81,7 @@ Les gabarits sont dans `src/components/templates/` et dans les routes de `src/ap
 
 **Formulaire de rappel** : prénom, nom, téléphone, créneau facultatif. Présent sur la quasi-totalité des pages.
 
-**Demandes** : tous les formulaires envoient vers `/api/lead`, qui valide, écarte les robots (champ piège, délai minimal) et transmet à `LEAD_WEBHOOK_URL`. Sans webhook, la route accepte en développement et répond 503 en production : le visiteur voit alors un message d'échec avec le numéro du cabinet, aucune demande n'est perdue en silence.
+**Demandes** : tous les formulaires envoient vers `/api/lead`, qui valide, écarte les robots (champ piège, délai minimal) et transmet à `LEAD_WEBHOOK_URL`. Sans webhook, la route accepte en développement et répond 503 en production : le visiteur voit alors un message d'échec avec le numéro du cabinet, aucune demande n'est perdue en silence. Sur une préversion, `LEAD_DEMO_MODE=true` lève ce refus : la demande est acceptée sans être transmise, le simulateur affiche son résultat calculé sur les réponses saisies, et un encadré « Mode démonstration » le signale. Ce réglage n'a aucun effet dès qu'un webhook est renseigné.
 
 ## Variables d'environnement
 

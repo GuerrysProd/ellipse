@@ -8,7 +8,7 @@ import { getSimulator } from '@/content/simulators';
 import type { SimField, SimResult, SimStep, SimValues } from '@/content/simulators/types';
 import { site } from '@/content/site';
 import { track } from '@/lib/tracking';
-import { ConsentBox, ErrorText, Honeypot, SendFailure, TextField } from './forms/Field';
+import { ConsentBox, DemoNotice, ErrorText, Honeypot, SendFailure, TextField } from './forms/Field';
 import { useLeadSubmit } from './forms/useLeadSubmit';
 
 type Phase = 'steps' | 'gate' | 'result';
@@ -260,6 +260,7 @@ export function SimulatorTool({ slug }: { slug: string }) {
           Votre résultat
         </h2>
         <ResultView result={result} />
+        {lead.demo && <DemoNotice />}
         <div className="mt-8 rounded-2xl bg-pearl p-6">
           <p className="font-serif text-2xl font-medium text-ink">Et maintenant ?</p>
           <p className="mt-2 text-slate">
