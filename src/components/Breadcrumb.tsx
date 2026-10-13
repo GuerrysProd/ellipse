@@ -12,7 +12,7 @@ export interface Crumb {
 export function Breadcrumb({ items }: { items: Crumb[] }) {
   const trail = [{ name: 'Accueil', path: '/' }, ...items];
   return (
-    <nav aria-label="Fil d'Ariane" className="mb-8 text-sm text-white/60">
+    <nav aria-label="Fil d'Ariane" className="mb-8 text-sm text-white/75">
       <ol className="flex flex-wrap items-center gap-2">
         {trail.map((item, index) => (
           <li key={item.path} className="flex items-center gap-2">

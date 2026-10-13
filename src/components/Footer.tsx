@@ -36,7 +36,7 @@ export function Footer() {
         <div>
           <Logo onDark />
           <div className="hairline mt-8 max-w-64 via-mist/50" />
-          <p className="mt-5 max-w-64 text-[0.7rem] leading-relaxed font-medium tracking-[0.26em] text-mist uppercase">Nous vous protégeons aujourd'hui pour préparer demain</p>
+          <p className="mt-5 max-w-72 font-serif text-[0.9rem] leading-relaxed font-medium tracking-[0.2em] text-mist uppercase">{site.tagline}</p>
 
           <address className="mt-8 grid gap-3 text-sm not-italic">
             <a className="flex items-center gap-3 text-white/80 transition-colors hover:text-white" href={`tel:${site.phone.e164}`}>
@@ -115,7 +115,7 @@ export function Footer() {
         </ul>
       </div>
 
-      <div className="container-page relative border-t border-white/10 py-8 text-[0.82rem] leading-relaxed text-white/55">
+      <div className="container-page relative border-t border-white/10 py-8 text-[0.82rem] leading-relaxed text-white/75">
         <ul className="mb-5 flex flex-wrap gap-x-5 gap-y-1 text-white/75">
           {legalLinks.map((link) => (
             <li key={link.href}>
@@ -140,7 +140,7 @@ export function Footer() {
           Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager. Aucun versement, de quelque nature que ce soit, ne peut être exigé d'un particulier avant
           l'obtention d'un ou plusieurs prêts d'argent.
         </p>
-        <p className="mt-4 text-white/40">
+        <p className="mt-4 text-white/65">
           © {new Date().getFullYear()} {site.name}
         </p>
       </div>

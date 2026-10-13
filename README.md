@@ -44,7 +44,7 @@ Le menu suit la signature du cabinet : **Protéger** (aujourd'hui) et **Prépare
 
 | Élément | Choix | Où le modifier |
 |---|---|---|
-| Couleurs | Argent et bleu pétrole du logo, bleu nuit pour les fonds sombres, touche dorée réservée aux détails | `src/app/globals.css`, bloc `@theme` |
+| Couleurs | Celles de la charte graphique du cabinet : fond gris très clair, anthracite, bleu ardoise du logo, argent. Aucun doré | `src/app/globals.css`, bloc `@theme` |
 | Typographies | Cormorant Garamond pour les titres (dans l'esprit du logotype), Manrope pour le texte | `src/app/layout.tsx` |
 | Logo | La sphère fournie (`public/brand/logo-ellipse.png`), le nom composé en texte | `src/components/Logo.tsx` |
 | Réseau | Logo NousAssurons blanc, sur fond sombre uniquement | `public/brand/nousassurons-blanc.png` |

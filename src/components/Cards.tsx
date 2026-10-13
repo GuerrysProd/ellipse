@@ -81,7 +81,7 @@ export function InfoGrid({ items, numbered = false, onDark = false }: { items: {
     <ul className={`grid gap-5 sm:grid-cols-2 ${numbered && items.length === 4 ? 'lg:grid-cols-4' : ''} ${numbered && items.length === 3 ? 'lg:grid-cols-3' : ''}`}>
       {items.map((item, index) => (
         <li key={item.name} data-reveal style={stagger(index)} className={onDark ? 'rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm' : 'card'}>
-          {numbered && <span className={`block font-serif text-5xl leading-none ${onDark ? 'text-gold' : 'text-mist'}`}>{String(index + 1).padStart(2, '0')}</span>}
+          {numbered && <span className={`block font-serif text-5xl leading-none ${onDark ? 'text-white/55' : 'text-mist'}`}>{String(index + 1).padStart(2, '0')}</span>}
           <h3 className={`text-lg ${numbered ? 'mt-4' : ''} ${onDark ? 'text-white' : ''}`}>{item.name}</h3>
           <p className={`mt-2 text-[0.95rem] ${onDark ? 'text-white/70' : 'text-slate'}`}>{item.text}</p>
         </li>

@@ -128,7 +128,7 @@ function ResultView({ result }: { result: SimResult }) {
       <div data-result className="surface-dark relative overflow-hidden rounded-3xl p-7 text-white sm:p-9">
         <p className="eyebrow text-mist">{result.headline.label}</p>
         <p className="mt-3 font-serif text-5xl leading-none font-medium sm:text-6xl">{result.headline.value}</p>
-        <div className="hairline my-5 max-w-40 bg-linear-to-r from-gold via-gold/40 to-transparent" />
+        <div className="hairline my-5 max-w-40 bg-linear-to-r from-mist via-mist/40 to-transparent" />
         {result.headline.note && <p className="max-w-xl text-white/75">{result.headline.note}</p>}
       </div>
 

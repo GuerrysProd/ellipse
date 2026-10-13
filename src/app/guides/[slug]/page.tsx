@@ -49,7 +49,7 @@ export default async function Page({ params }: Props) {
         intro={guide.summary}
         photo={guidePhoto(guide.slug, guide.theme)}
       >
-        <p className="text-sm text-white/65">
+        <p className="text-sm text-white/75">
           Par{' '}
           <Link href={cabinetPath(site.founder.slug)} className="font-semibold text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">
             {site.founder.name}

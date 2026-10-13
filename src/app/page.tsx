@@ -79,15 +79,15 @@ export default function HomePage() {
 
             <ul className="mt-12 flex flex-wrap gap-x-8 gap-y-4 text-sm text-white/80">
               <li className="flex items-center gap-2.5">
-                <BadgeCheck className="size-4.5 text-gold" strokeWidth={1.6} aria-hidden="true" />
+                <BadgeCheck className="size-4.5 text-mist" strokeWidth={1.6} aria-hidden="true" />
                 ORIAS n° {site.legal.orias}
               </li>
               <li className="flex items-center gap-2.5">
-                <Network className="size-4.5 text-gold" strokeWidth={1.6} aria-hidden="true" />
+                <Network className="size-4.5 text-mist" strokeWidth={1.6} aria-hidden="true" />
                 Plus de {site.insurersCount} compagnies comparées
               </li>
               <li className="flex items-center gap-2.5">
-                <MapPin className="size-4.5 text-gold" strokeWidth={1.6} aria-hidden="true" />
+                <MapPin className="size-4.5 text-mist" strokeWidth={1.6} aria-hidden="true" />
                 {site.radiusKm} km autour de {site.baseCity}
               </li>
             </ul>
@@ -108,9 +108,9 @@ export default function HomePage() {
                       </span>
                       <span className="flex-1">
                         <span className="block font-semibold">{simulator.name}</span>
-                        <span className="block text-sm text-white/65">{simulator.tagline}</span>
+                        <span className="block text-sm text-white/75">{simulator.tagline}</span>
                       </span>
-                      <ArrowRight className="size-4 text-white/60 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-white" aria-hidden="true" />
+                      <ArrowRight className="size-4 text-white/75 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-white" aria-hidden="true" />
                     </Link>
                   </li>
                 );
@@ -149,7 +149,7 @@ export default function HomePage() {
               <article key={universe} data-reveal style={delay(index * 120)} className="group relative isolate flex min-h-[34rem] flex-col justify-end overflow-hidden rounded-[2rem] bg-ink p-7 text-white shadow-soft sm:p-10">
                 <Photo photo={photo} sizes="(min-width: 1024px) 50vw, 100vw" className="-z-20 transition-transform duration-[1500ms] ease-out group-hover:scale-105" decorative />
                 <span aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-t from-ink via-ink/75 to-ink/20" />
-                <p className="eyebrow text-gold">{eyebrow}</p>
+                <p className="eyebrow text-mist">{eyebrow}</p>
                 <h3 className="mt-3 font-serif text-5xl font-medium text-white sm:text-6xl">{info.name}</h3>
                 <p className="mt-4 max-w-md text-white/80">{info.intro}</p>
                 <ul className="mt-6 flex flex-wrap gap-2">
@@ -259,7 +259,7 @@ export default function HomePage() {
           <div className="relative lg:border-l lg:border-white/15 lg:pl-10">
             <p className="eyebrow text-mist">Membre du réseau {site.network}</p>
             <p className="mt-2 font-serif text-3xl leading-tight font-medium sm:text-4xl">
-              Plus de <span className="text-gold">{site.insurersCount} compagnies</span> comparées pour vous
+              Plus de <span className="text-mist">{site.insurersCount} compagnies</span> comparées pour vous
             </p>
           </div>
           <Link href={cabinetPath('compagnies-partenaires')} className="btn-glass relative">

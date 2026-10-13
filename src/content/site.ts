@@ -6,7 +6,8 @@ export const site = {
   name: 'Ellipse Solutions',
   legalName: 'Ellipse Solutions 360',
   url: 'https://www.ellipsefrance.com',
-  tagline: "Protéger aujourd'hui, préparer demain",
+  // Signature du cabinet, telle qu'elle figure sur sa charte graphique.
+  tagline: "Nous vous protégeons aujourd'hui pour préparer demain",
   description:
     "Courtier indépendant en assurance à Chalon-sur-Saône : artisans du bâtiment, vignerons, agriculteurs, dirigeants et particuliers, dans un rayon de 100 km.",
 
